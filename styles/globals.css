@@ -1,16 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-* {
-  box-sizing: border-box;
+.controls {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.controls .header {
+  margin: 20px;
+  text-transform: uppercase;
+}
+.controls .button {
+  margin: 20px;
+}
+ul {
+  list-style: none;
+}
+.result :nth-child(n) {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid lightgray;
+  color: #3182ce;
+  border-radius: 10px;
+  box-shadow: inset 0 0 1em lightgray, 0 0 1em darkgray;
+}
+
+.indridients {
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .indridients ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 }
